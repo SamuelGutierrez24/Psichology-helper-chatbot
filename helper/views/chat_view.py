@@ -19,6 +19,7 @@ unde=[]
 diag=[]
 low=[]
 influ=""
+#Hola buenas tardes
 
 preguntas = [
   "¿Sientes que no te puedes relajar?",
