@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a helper</title>
+    <link rel="stylesheet" href="/static/name.css">
+    
+</head>
+<body>
+    <h1>Bienvenido a Helper</h1>
+    <p>Por favor, introduce tu nombre para comenzar:</p>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+        <button type="submit">Comenzar</button>
+    </form>
+</body>
+</html>

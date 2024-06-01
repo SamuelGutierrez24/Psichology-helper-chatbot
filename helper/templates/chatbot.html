@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot de Ayuda Psicológica</title>
+    <link rel="stylesheet" href="/static/chat.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Chatbot Helper para {{ name }}</h1>
+            <form action="/logout" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="logout">
+                <button class="bi bi-box-arrow-right" type="submit"></button>
+            </form>
+        </header>
+        <main>
+            <div class="chat-container">
+                <div id="chat-box" class="chat-box">
+                    {% if pregunta_inicial %}
+                        {% for n in pregunta_inicial %}
+                            <div class="message bot-message">{{ n }}</div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <input type="text" id="user-input" placeholder="Responda con si o no">
+            </div>
+        </main>
+        <button id="send-btn">Enviar</button>
+    </div>
+    
+    <script src="/static/chat.js"></script>
+</body>
+</html>
