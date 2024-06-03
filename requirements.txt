@@ -1,5 +1,5 @@
 Django==5.0.6
-frozendict==2.4.2
-experta==1.9.4
 pgmpy==0.1.25
+experta==1.9.4
+frozendict==2.4.2 --force
 
